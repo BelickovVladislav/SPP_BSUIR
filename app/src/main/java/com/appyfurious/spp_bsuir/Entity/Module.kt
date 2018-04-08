@@ -1,4 +1,8 @@
 package com.appyfurious.spp_bsuir.Entity
 
-class Module {
+import io.realm.RealmObject
+
+class Module: RealmObject() {
+    var name: String? = null
+    var trainingTime: TrainingTime? = null
 }
