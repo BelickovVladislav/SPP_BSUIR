@@ -5,7 +5,7 @@ import io.realm.annotations.PrimaryKey
 
 open class Session: RealmObject() {
     @PrimaryKey
-    var userId: String? = null
+    var email: String? = null
     var isTeacher = false
     var isAuth = false
 }

@@ -1,9 +1,10 @@
 package com.appyfurious.spp_bsuir.Entity
 
+import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import java.util.*
 
-class Comment {
+open class Comment: RealmObject() {
     @PrimaryKey
     var id = UUID.randomUUID().toString()
     var title: String? = null

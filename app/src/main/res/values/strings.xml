@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SPP-BSUIR</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="auth">Auth</string>
+    <string name="full_name">full name</string>
+    <string name="error_auth">Не верный логин или пароль</string>
+    <string name="success_register">Вы успешно зарегестрировались. Теперь авторизуйтесь.</string>
+    <string name="error_register">Ошибка регистрации. Аккаунт с таким email уже занят.</string>
 </resources>
