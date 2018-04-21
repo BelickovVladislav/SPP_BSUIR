@@ -16,6 +16,7 @@ class NewsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_news)
 
         newsList.layoutManager = LinearLayoutManager(this)
+        //TODO read DB
         newsList.adapter = NewsAdapter(this, listOf(
                 getNews("title 1", "description 1", Calendar.getInstance().time),
                 getNews("title 2", "description 1", Calendar.getInstance().time),
