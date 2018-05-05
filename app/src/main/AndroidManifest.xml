@@ -13,13 +13,14 @@
         <activity android:name=".ui.activity.LoginActivity"></activity>
         <activity android:name=".ui.activity.MainActivity" />
         <activity android:name=".ui.activity.NewsActivity">
-        </activity>
-        <activity android:name=".ui.activity.NewsCreateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.NewsCreateActivity">
+
         </activity>
     </application>
 

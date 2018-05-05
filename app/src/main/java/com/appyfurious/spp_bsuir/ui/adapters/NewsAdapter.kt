@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.appyfurious.spp_bsuir.Entity.News
 import com.appyfurious.spp_bsuir.R
-import com.appyfurious.spp_bsuir.ui.adapters.holders.NewsViewHolder
+import com.appyfurious.spp_bsuir.ui.adapters.view_holder.NewsViewHolder
 import java.text.SimpleDateFormat
 
 class NewsAdapter(private val context: Context, private val newsList: List<News>): RecyclerView.Adapter<NewsViewHolder>() {

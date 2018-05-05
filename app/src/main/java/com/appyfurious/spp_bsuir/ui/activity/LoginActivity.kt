@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.appyfurious.spp_bsuir.R
 import com.appyfurious.spp_bsuir.repository.AuthRepository
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 

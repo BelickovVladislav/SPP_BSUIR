@@ -5,14 +5,32 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.appyfurious.spp_bsuir.Entity.News
 import com.appyfurious.spp_bsuir.R
+import com.appyfurious.spp_bsuir.repository.ScopeRepository
+import kotlinx.android.synthetic.main.activity_news_create.*
+import com.appyfurious.spp_bsuir.Entity.Scope
+import com.appyfurious.spp_bsuir.repository.NewsRepository
+
 
 class NewsCreateActivity : AppCompatActivity() {
+
+    private val scopeRepository = ScopeRepository()
+    private val newsRepository = NewsRepository()
+
+    private lateinit var scopes: List<Scope>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_create)
+
+        scopeRepository.getAll {
+            scopes = it
+            newsCreateSpinner.adapter = ArrayAdapter<String>(this,
+                    android.R.layout.simple_spinner_item, it.map { it.name })
+        }
     }
 
     @SuppressLint("StringFormatMatches")
@@ -37,9 +55,20 @@ class NewsCreateActivity : AppCompatActivity() {
                     showAlertEmptyText(R.string.description)
                     return super.onOptionsItemSelected(item)
                 }
-                //TODO save DB
             }
         }
+        saveNews()
+        Toast.makeText(this, R.string.success_news_create, Toast.LENGTH_SHORT).show()
+        finish()
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun saveNews() {
+        val news = News()
+        val scopeName = newsCreateSpinner.selectedItem.toString()
+        news.scopeId = scopes.first { it.name == scopeName }.id
+        news.title = newsCreateTitle.text.toString()
+        news.description = newsCreateDescription.text.toString()
+        newsRepository.add(news)
     }
 }

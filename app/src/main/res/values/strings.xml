@@ -11,4 +11,5 @@
     <string name="create">Создать</string>
     <string name="description">Описание</string>
     <string name="not_empty_property">Поле %1$s не должно быть пустым.</string>
+    <string name="success_news_create">Новость успешно создана.</string>
 </resources>
