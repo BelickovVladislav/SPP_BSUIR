@@ -3,18 +3,18 @@
     package="com.appyfurious.spp_bsuir">
 
     <application
-        android:name=".Configuration.MyApplication"
+        android:name=".configuration.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UI.Activity.LoginActivity"></activity>
-        <activity android:name=".UI.Activity.MainActivity" />
-        <activity android:name=".UI.Activity.NewsActivity">
+        <activity android:name=".ui.activity.LoginActivity"></activity>
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.NewsActivity">
         </activity>
-        <activity android:name=".UI.Activity.NewsCreateActivity">
+        <activity android:name=".ui.activity.NewsCreateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

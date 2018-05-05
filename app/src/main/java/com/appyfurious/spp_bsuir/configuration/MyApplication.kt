@@ -1,4 +1,4 @@
-package com.appyfurious.spp_bsuir.Configuration
+package com.appyfurious.spp_bsuir.configuration
 
 import android.app.Application
 import io.realm.Realm

@@ -1,4 +1,4 @@
-package com.appyfurious.spp_bsuir.UI.Activity
+package com.appyfurious.spp_bsuir.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.appyfurious.spp_bsuir.R
-import com.appyfurious.spp_bsuir.Repository.AuthRepository
-import kotlinx.android.synthetic.main.activity_login.*
+import com.appyfurious.spp_bsuir.repository.AuthRepository
 
 class LoginActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 

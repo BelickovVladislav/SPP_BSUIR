@@ -1,12 +1,11 @@
-package com.appyfurious.spp_bsuir.UI.Activity
+package com.appyfurious.spp_bsuir.ui.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.appyfurious.spp_bsuir.Entity.News
 import com.appyfurious.spp_bsuir.R
-import com.appyfurious.spp_bsuir.UI.Adapters.NewsAdapter
-import kotlinx.android.synthetic.main.activity_news.*
+import com.appyfurious.spp_bsuir.ui.adapters.NewsAdapter
 import java.util.*
 
 class NewsActivity : AppCompatActivity() {

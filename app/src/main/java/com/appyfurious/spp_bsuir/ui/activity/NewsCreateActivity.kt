@@ -1,4 +1,4 @@
-package com.appyfurious.spp_bsuir.UI.Activity
+package com.appyfurious.spp_bsuir.ui.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import com.appyfurious.spp_bsuir.R
-import kotlinx.android.synthetic.main.activity_news_create.*
 
 class NewsCreateActivity : AppCompatActivity() {
 
