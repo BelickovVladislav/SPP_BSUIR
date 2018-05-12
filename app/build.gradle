@@ -8,7 +8,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.appyfurious.spp_bsuir"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion target_version
         versionCode 1
         versionName "1.0"

@@ -15,4 +15,9 @@
     <string name="certificates">Сертификаты</string>
     <string name="news">Новости</string>
     <string name="create_news">Создание новости</string>
+    <string name="learn_center">Учебный центр</string>
+    <string name="exit">Выход</string>
+    <string name="exit_message">Вы уверены что хотите выйти?</string>
+    <string name="exit_true">Выйти</string>
+    <string name="back">Вернуться</string>
 </resources>
