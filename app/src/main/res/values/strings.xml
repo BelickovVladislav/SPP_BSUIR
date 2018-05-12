@@ -12,4 +12,7 @@
     <string name="description">Описание</string>
     <string name="not_empty_property">Поле %1$s не должно быть пустым.</string>
     <string name="success_news_create">Новость успешно создана.</string>
+    <string name="certificates">Сертификаты</string>
+    <string name="news">Новости</string>
+    <string name="create_news">Создание новости</string>
 </resources>

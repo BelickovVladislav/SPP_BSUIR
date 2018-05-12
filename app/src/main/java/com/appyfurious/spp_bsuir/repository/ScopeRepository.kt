@@ -1,6 +1,6 @@
 package com.appyfurious.spp_bsuir.repository
 
-import com.appyfurious.spp_bsuir.Entity.Scope
+import com.appyfurious.spp_bsuir.entity.Scope
 import io.realm.Realm
 
 class ScopeRepository {

@@ -1,8 +1,8 @@
 package com.appyfurious.spp_bsuir.repository
 
-import com.appyfurious.spp_bsuir.Entity.Session
-import com.appyfurious.spp_bsuir.Entity.Student
-import com.appyfurious.spp_bsuir.Entity.Teacher
+import com.appyfurious.spp_bsuir.entity.Session
+import com.appyfurious.spp_bsuir.entity.Student
+import com.appyfurious.spp_bsuir.entity.Teacher
 import io.realm.Realm
 
 class AuthRepository {

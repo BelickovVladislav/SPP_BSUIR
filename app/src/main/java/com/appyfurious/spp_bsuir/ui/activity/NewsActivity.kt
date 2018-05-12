@@ -9,8 +9,8 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import com.appyfurious.spp_bsuir.Entity.News
-import com.appyfurious.spp_bsuir.Entity.Scope
+import com.appyfurious.spp_bsuir.entity.News
+import com.appyfurious.spp_bsuir.entity.Scope
 import com.appyfurious.spp_bsuir.R
 import com.appyfurious.spp_bsuir.repository.NewsRepository
 import com.appyfurious.spp_bsuir.repository.ScopeRepository
@@ -27,6 +27,8 @@ class NewsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
+        supportActionBar?.setTitle(R.string.news)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         newsList.layoutManager = LinearLayoutManager(this)
 
@@ -45,6 +47,11 @@ class NewsActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
             news = it
             newsList.adapter = NewsAdapter(this, it)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

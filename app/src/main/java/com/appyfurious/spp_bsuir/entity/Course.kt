@@ -1,4 +1,4 @@
-package com.appyfurious.spp_bsuir.Entity
+package com.appyfurious.spp_bsuir.entity
 
 import io.realm.RealmList
 import io.realm.RealmObject

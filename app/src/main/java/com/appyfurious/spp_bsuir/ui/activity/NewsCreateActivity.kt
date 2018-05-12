@@ -7,11 +7,11 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.appyfurious.spp_bsuir.Entity.News
+import com.appyfurious.spp_bsuir.entity.News
 import com.appyfurious.spp_bsuir.R
 import com.appyfurious.spp_bsuir.repository.ScopeRepository
 import kotlinx.android.synthetic.main.activity_news_create.*
-import com.appyfurious.spp_bsuir.Entity.Scope
+import com.appyfurious.spp_bsuir.entity.Scope
 import com.appyfurious.spp_bsuir.repository.NewsRepository
 
 
@@ -25,6 +25,8 @@ class NewsCreateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_create)
+        supportActionBar?.setTitle(R.string.create_news)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         scopeRepository.getAll {
             scopes = it
@@ -42,6 +44,11 @@ class NewsCreateActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.item_create, menu)
         return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

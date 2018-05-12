@@ -5,7 +5,7 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.appyfurious.spp_bsuir.Entity.News
+import com.appyfurious.spp_bsuir.entity.News
 import com.appyfurious.spp_bsuir.R
 import com.appyfurious.spp_bsuir.ui.adapters.view_holder.NewsViewHolder
 import java.text.SimpleDateFormat

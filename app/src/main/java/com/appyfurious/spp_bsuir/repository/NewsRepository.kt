@@ -1,6 +1,6 @@
 package com.appyfurious.spp_bsuir.repository
 
-import com.appyfurious.spp_bsuir.Entity.News
+import com.appyfurious.spp_bsuir.entity.News
 import io.realm.Realm
 import java.util.*
 
