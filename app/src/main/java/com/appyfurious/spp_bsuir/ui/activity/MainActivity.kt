@@ -44,15 +44,19 @@ class MainActivity : AppCompatActivity(), MainAdapter.MainItemListener {
             startActivity(Intent(this, it))
         }
         if (position == 6) {
-            closeBuilder()
+            onBackPressed()
         }
+    }
+
+    override fun onBackPressed() {
+        closeBuilder()
     }
 
     private fun closeBuilder() {
         AlertDialog.Builder(this).setTitle(R.string.exit)
                 .setMessage(R.string.exit_message)
                 .setNegativeButton(R.string.exit_true) { _, _ ->
-                    finishAffinity()
+                    super.onBackPressed()
                 }.setPositiveButton(R.string.back) { _, _ -> }
                 .create().show()
     }

@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.appyfurious.spp_bsuir.R
-import com.appyfurious.spp_bsuir.ui.adapters.view_holder.MainViewHolder
+import com.appyfurious.spp_bsuir.ui.adapters.holder.MainViewHolder
 
 class MainAdapter(private val context: Context,
                   private val items: List<String>,

@@ -29,6 +29,13 @@ class AuthRepository {
         }
     }
 
+    fun isAuth(body: (_: Boolean) -> Unit) {
+        Realm.getDefaultInstance().executeTransaction {
+            val isAuth = it.where(Session::class.java).findAll().firstOrNull { it.isAuth } != null
+            body(isAuth)
+        }
+    }
+
     fun authNewUser(fullName: String, email: String, password: String, type: String?, body: (_: Boolean) -> Unit) {
         val userType = type ?: usersTypeList[0]
         Realm.getDefaultInstance().executeTransaction {

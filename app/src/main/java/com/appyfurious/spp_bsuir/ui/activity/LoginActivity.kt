@@ -44,6 +44,12 @@ class LoginActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        authRepository.isAuth { isAuth ->
+            if (isAuth) {
+                startActivity(Intent(this, MainActivity::class.java))
+            }
+        }
+
         statusActivity(true)
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, authRepository.usersTypeList)

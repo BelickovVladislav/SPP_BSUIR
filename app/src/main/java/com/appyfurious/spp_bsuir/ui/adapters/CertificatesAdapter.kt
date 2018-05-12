@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.appyfurious.spp_bsuir.entity.Certificate
 import com.appyfurious.spp_bsuir.R
-import com.appyfurious.spp_bsuir.ui.adapters.view_holder.CertificatesViewHolder
+import com.appyfurious.spp_bsuir.ui.adapters.holder.CertificatesViewHolder
 import java.text.SimpleDateFormat
 
 class CertificatesAdapter(private val context: Context,
