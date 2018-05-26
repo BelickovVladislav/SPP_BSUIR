@@ -7,16 +7,21 @@ import java.util.*
 
 class CertificatesRepository {
 
+    companion object {
+        const val BASIC_ID = "001"
+        const val ADVANCED_ID = "002"
+        const val TOP_ID = "003"
+    }
+
     private val certificates = listOf(
-            create("001", Certificate.BASIC_TYPE, "Английскйи: Начало", "Изучаем базовый английский с любого уровня."),
-            create("002", Certificate.ADVANCED_TYPE, "Английский: Учимся говорить", "Изучаем разговорный английский с носителями языка."),
-            create("003", Certificate.TOP_TYPE, "Почти англичанин", "Меняем гражданстов, и становимся гуру.")
+            Certificate.create(BASIC_ID, Certificate.BASIC_TYPE, "Английскйи: Начало", "Сертификат подтверждающий базовые знания по английскому языку."),
+            Certificate.create(BASIC_ID, Certificate.ADVANCED_TYPE, "Английский: Учимся говорить", "Сертификат подтверждающий навык владения разговорным английским.."),
+            Certificate.create(BASIC_ID, Certificate.TOP_TYPE, "Почти англичанин", "Сертификат подтверждающий что английский вы знаете лучше чем мову.")
     )
 
     fun create() {
         Realm.getDefaultInstance().executeTransaction {
-            it.where(Certificate::class.java).findAll().deleteAllFromRealm()
-            it.insert(certificates)
+            it.insertOrUpdate(certificates)
         }
     }
 
@@ -25,13 +30,4 @@ class CertificatesRepository {
             body(it.where(Certificate::class.java).findAll())
         }
     }
-
-    private fun create(id: String, type: String, name: String, description: String) = Certificate().apply {
-        this.id = id
-        this.type = Certificate.BASIC_TYPE
-        this.name = name
-        this.decription = description
-        this.dateReceipt = Calendar.getInstance().time
-    }
-
 }

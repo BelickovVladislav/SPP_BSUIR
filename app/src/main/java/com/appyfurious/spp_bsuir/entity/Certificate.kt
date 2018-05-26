@@ -4,12 +4,20 @@ import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import java.util.*
 
-open class Certificate: RealmObject() {
+open class Certificate : RealmObject() {
 
     companion object {
         const val BASIC_TYPE = "Базовый"
         const val ADVANCED_TYPE = "Продвинутый"
         const val TOP_TYPE = "Наивысший"
+
+        fun create(id: String, type: String, name: String, description: String) = Certificate().apply {
+            this.id = id
+            this.type = type
+            this.name = name
+            this.decription = description
+            this.dateReceipt = Calendar.getInstance().time
+        }
     }
 
     @PrimaryKey
