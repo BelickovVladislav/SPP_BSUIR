@@ -1,31 +1,26 @@
 package com.appyfurious.spp_bsuir.ui.activity
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.appyfurious.spp_bsuir.R
+import com.appyfurious.spp_bsuir.entity.Certificate
 import com.appyfurious.spp_bsuir.repository.CertificateRepository
-import com.appyfurious.spp_bsuir.ui.adapters.CertificateAdapter
-import kotlinx.android.synthetic.main.activity_certificates.*
-//TODO не принтует все
-class CertificatesActivity : AppCompatActivity() {
+import kotlinx.android.synthetic.main.activity_create_certificate.*
+
+class CreateCertificateActivity : AppCompatActivity() {
 
     private val certificateRepository = CertificateRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_certificates)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setTitle(R.string.certificates)
-
-        listCertificates.layoutManager = LinearLayoutManager(this)
-
-        certificateRepository.get {
-            listCertificates.adapter = CertificateAdapter(this, it)
-        }
+        setContentView(R.layout.activity_create_certificate)
+        createCertificateType.adapter = ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item,
+                listOf(Certificate.BASIC_TYPE, Certificate.ADVANCED_TYPE, Certificate.TOP_TYPE))
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -41,7 +36,12 @@ class CertificatesActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.create_object -> {
-                startActivity(Intent(this, CreateCertificateActivity::class.java))
+                certificateRepository.create(
+                        createCertificateTitle.text.toString(),
+                        createCertificateDescription.text.toString(),
+                        createCertificateType.selectedItem.toString())
+                Toast.makeText(this, R.string.success_create_certificate, Toast.LENGTH_SHORT).show()
+                finish()
             }
         }
         return super.onOptionsItemSelected(item)

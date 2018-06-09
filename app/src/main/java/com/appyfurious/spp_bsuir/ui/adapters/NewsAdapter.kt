@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.appyfurious.spp_bsuir.entity.News
 import com.appyfurious.spp_bsuir.R
+import com.appyfurious.spp_bsuir.format.DateFormat
 import com.appyfurious.spp_bsuir.ui.adapters.holder.NewsViewHolder
 import java.text.SimpleDateFormat
 
@@ -18,12 +19,10 @@ class NewsAdapter(private val context: Context, private val newsList: List<News>
 
     override fun getItemCount() = newsList.size
 
-    @SuppressLint("SimpleDateFormat")
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         val news = newsList[position]
         holder.title.text = news.title
         holder.description.text = news.description
-        val formatter = SimpleDateFormat("dd.MM.yy HH:mm")
-        holder.timeCreate.text = formatter.format(news.creationDate)
+        holder.timeCreate.text = DateFormat().format(news.creationDate)
     }
 }

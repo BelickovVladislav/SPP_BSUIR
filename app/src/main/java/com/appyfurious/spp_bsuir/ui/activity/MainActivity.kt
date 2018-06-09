@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.MainItemListener {
     override fun onClick(view: View, position: Int) {
         val clazz = when (position) {
             0 -> NewsActivity::class.java
-            1 -> null
+            1 -> CoursesActivity::class.java
             2 -> null
             3 -> CertificatesActivity::class.java
             4 -> null

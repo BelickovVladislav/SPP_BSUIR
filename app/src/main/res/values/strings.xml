@@ -20,4 +20,8 @@
     <string name="exit_message">Вы уверены что хотите выйти?</string>
     <string name="exit_true">Выйти</string>
     <string name="back">Вернуться</string>
+    <string name="time_end">Окончание:</string>
+    <string name="time_duration">Продолжительность:</string>
+    <string name="time_start">Начало:</string>
+    <string name="success_create_certificate">Серитфикат успешно создан</string>
 </resources>
