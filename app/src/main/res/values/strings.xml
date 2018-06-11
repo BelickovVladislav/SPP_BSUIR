@@ -25,4 +25,6 @@
     <string name="time_start">Начало:</string>
     <string name="success_create_certificate">Серитфикат успешно создан</string>
     <string name="course_title">Курсы</string>
+    <string name="teacher_title">Преподаватели</string>
+    <string name="registr">Регистрация</string>
 </resources>

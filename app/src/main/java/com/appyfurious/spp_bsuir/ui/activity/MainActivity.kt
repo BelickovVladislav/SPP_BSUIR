@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), MainAdapter.MainItemListener {
         val clazz = when (position) {
             0 -> NewsActivity::class.java
             1 -> CoursesActivity::class.java
-            2 -> null
+            2 -> TeachersActivity::class.java
             3 -> CertificatesActivity::class.java
             4 -> null
             5 -> null

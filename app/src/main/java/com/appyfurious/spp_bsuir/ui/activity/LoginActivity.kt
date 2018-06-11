@@ -78,12 +78,14 @@ class LoginActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         this.isActivityLogin = isActivityLogin
         if (isActivityLogin) {
             authButton.setOnClickListener(authListener)
+            authButton.setText(R.string.auth)
             supportActionBar?.setDisplayHomeAsUpEnabled(false)
             fullName.visibility = View.GONE
             newAccount.visibility = View.VISIBLE
             email.requestFocus()
         } else {
             authButton.setOnClickListener(registrationListener)
+            authButton.setText(R.string.registr)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             fullName.visibility = View.VISIBLE
             newAccount.visibility = View.GONE
