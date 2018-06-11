@@ -1,8 +1,10 @@
 package com.appyfurious.spp_bsuir.configuration
 
 import android.app.Application
+import com.appyfurious.spp_bsuir.entity.News
 import com.appyfurious.spp_bsuir.repository.CertificateRepository
 import com.appyfurious.spp_bsuir.repository.CourseRepository
+import com.appyfurious.spp_bsuir.repository.NewsRepository
 import com.appyfurious.spp_bsuir.repository.ScopeRepository
 import io.realm.Realm
 
@@ -14,5 +16,6 @@ class MyApplication: Application() {
         ScopeRepository().create()
         CertificateRepository().create()
         CourseRepository().create()
+        NewsRepository().create()
     }
 }

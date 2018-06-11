@@ -24,4 +24,5 @@
     <string name="time_duration">Продолжительность:</string>
     <string name="time_start">Начало:</string>
     <string name="success_create_certificate">Серитфикат успешно создан</string>
+    <string name="course_title">Курсы</string>
 </resources>
