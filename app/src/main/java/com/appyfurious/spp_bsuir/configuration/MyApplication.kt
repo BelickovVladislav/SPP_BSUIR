@@ -16,5 +16,6 @@ class MyApplication: Application() {
         CourseRepository().create()
         NewsRepository().create()
         TeacherRepository().create()
+        //belka
     }
 }
